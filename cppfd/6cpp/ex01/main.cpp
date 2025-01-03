@@ -16,11 +16,11 @@ int main (void)
 {
     Data originalData = {42, 19, 12, 2024};
 
-    uintptr_t serializedData = serialize::serialize(&originalData);
+    uintptr_t serializedData = serializer::serialize(&originalData);
     std::cout << "Serialized Data (uintptr_t): " << serializedData << std::endl;
 
-    Data* deserializedData = serialize::deserialize(serializedData);
-    std::cout << serializedData << " " << serialize::serialize(&deserializedData) << std::endl;
+    Data* deserializedData = serializer::deserialize(serializedData);
+    std::cout << serializedData << " " << serializer::serialize(deserializedData) << std::endl;
     
     
 

@@ -12,18 +12,18 @@
 
 #include "serialize.hpp"
 
-serialize::serialize()
+serializer::serializer()
 {}
 
-serialize::~serialize()
+serializer::~serializer()
 {}
 
-uintptr_t serialize::serialize(Data* ptr)
+uintptr_t serializer::serialize(Data* ptr)
 {
     return reinterpret_cast<uintptr_t>(ptr);
 }
 
-Data* serialize::deserialize(uintptr_t raw)
+Data* serializer::deserialize(uintptr_t raw)
 {
     return reinterpret_cast<Data*>(raw);
 }

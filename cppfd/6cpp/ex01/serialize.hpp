@@ -24,11 +24,11 @@ struct Data
     int year;
 };
 
-class serialize
+class serializer
 {
     private : 
-        serialize();
-        ~serialize();
+        serializer();
+        ~serializer();
     public :
         static uintptr_t serialize(Data* ptr);
         static Data* deserialize(uintptr_t raw);
